@@ -41,6 +41,9 @@ Description :
 - [x] `COPY` copies the requirements file where Python modules are listed
 - [x] `RUN pip` installs the Python modules listed in `requirements.txt` 
 
+
+For more documentation on these commands and on all available `Dockerfile` commands see [online documentation](https://docs.docker.com/engine/reference/builder/#format)
+
 ## `docker-compose.yml` 
 
 ```console
