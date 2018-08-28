@@ -11,7 +11,7 @@ This repository contains all the necessary code to launch a Flask app in a Docke
 
 ## `Dockerfile` 
 
-```docker
+```console
 FROM python:3.6-slim
 MAINTAINER Dimitri Bettebghor
 
@@ -31,9 +31,13 @@ COPY . .
 CMD gunicorn -b 0.0.0.0:8000 --access-logfile - "web_app.app:app"
 ```
 
+Description :
+- [x] 
+
+
 ## `docker-compose.yml` 
 
-
+```console
 version: '2'
 
 services:
@@ -50,5 +54,5 @@ services:
       - '.:/web_app'
     ports:
       - '8000:8000'
-
+```
 
