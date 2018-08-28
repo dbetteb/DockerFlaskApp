@@ -34,6 +34,21 @@ CMD gunicorn -b 0.0.0.0:8000 --access-logfile - "web_app.app:app"
 ## `docker-compose.yml` 
 
 
+version: '2'
 
+services:
+  web_app:
+    build: .
+    command: >
+      gunicorn -b 0.0.0.0:8000
+      --access-logfile -
+      --reload
+      "web_app.app:app"
+    environment:
+      PYTHONUNBUFFERED: 'true'
+    volumes:
+      - '.:/web_app'
+    ports:
+      - '8000:8000'
 
 
