@@ -32,8 +32,14 @@ CMD gunicorn -b 0.0.0.0:8000 --access-logfile - "web_app.app:app"
 ```
 
 Description :
-- [x] FROM indicates with Docker image 
-
+- [x] `FROM` indicates which Docker image is to be used
+- [x] `MAINTAINER` gives the name of the author of the Docker image
+- [x] `RUN` launches packages installation 
+- [x] `ENV` sets environment variable
+- [x] `RUN` mkdir creates a repository
+- [x] `WORKDIR` sets the working directory
+- [x] `COPY` copies the requirements file where Python modules are listed
+- [x] `RUN pip` installs the Python modules listed in `requirements.txt` 
 
 ## `docker-compose.yml` 
 
