@@ -65,4 +65,4 @@ services:
       - '8000:8000'
 ```
 
-`docker-compose.yml` file
+`docker-compose.yml` file. Documentation on `docker-compose` file can be found [here](https://docs.docker.com/compose/compose-file/)
