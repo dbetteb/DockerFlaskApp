@@ -47,20 +47,20 @@ For more documentation on these commands and on all available `Dockerfile` comma
 ## `docker-compose.yml` 
 
 ```console
-version: '2'
+version: '3'
 
 services:
-  web_app:
+  webapp:
     build: .
     command: >
       gunicorn -b 0.0.0.0:8000
       --access-logfile -
       --reload
-      "web_app.app:app"
+      "webapp.app:app"
     environment:
       PYTHONUNBUFFERED: 'true'
     volumes:
-      - '.:/web_app'
+      - '.:/webapp'
     ports:
       - '8000:8000'
 ```
