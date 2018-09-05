@@ -28,7 +28,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn -b 0.0.0.0:8000 --access-logfile - "webapp.app:app"
+CMD gunicorn -b 0.0.0.0:3333 --access-logfile - "webapp.app:app"
 ```
 
 Description :
@@ -53,7 +53,7 @@ services:
   webapp:
     build: .
     command: >
-      gunicorn -b 0.0.0.0:8000
+      gunicorn -b 0.0.0.0:3333
       --access-logfile -
       --reload
       "webapp.app:app"
@@ -62,7 +62,28 @@ services:
     volumes:
       - '.:/webapp'
     ports:
-      - '8000:8000'
+      - '3333:3333'
 ```
 
 `docker-compose.yml` file. Documentation on `docker-compose` file can be found [here](https://docs.docker.com/compose/compose-file/)
+
+## Running the container
+
+Now in a terminal, run
+
+```console
+docker-compose up --build
+```
+
+You should see all the steps, and if everything works you can now open a browser and type in the URL
+
+
+```console
+localhost:3333/users/Toto
+```
+and you should see
+
+[!Alt text](img/flaskapprunning.PNG)
+
+
+
