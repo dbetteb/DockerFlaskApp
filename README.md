@@ -83,7 +83,7 @@ localhost:3333/users/Toto
 ```
 and you should see
 
-[!Alt text](img/flaskapprunning.PNG)
+![Alt text](img/flaskapprunning.PNG)
 
 
 
