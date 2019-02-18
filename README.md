@@ -1,5 +1,9 @@
 # DockerFlaskApp
 
+## Objective
+
+This repository shows how to launch an API with Docker and Flask in Python.:
+
 ## Summary
 
 This repository contains all the necessary code to launch a Flask app in a Docker.
